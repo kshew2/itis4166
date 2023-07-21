@@ -1,0 +1,257 @@
+body 
+{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #011b10;
+  background-color: #b7bf96;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: large;
+}
+
+header
+{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
+  background-color: #030b07;
+}
+main
+{
+  margin: 25px 100px 100px;
+}
+cover{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    margin-top: auto;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: #030b07;
+}
+h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+nav{
+    overflow: hidden;
+    background-color: #030b07;
+ }
+ .topnav{
+     margin-left: 75px;
+     margin-right: 75px;
+ }
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 12px 12px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+.topnav a.split {
+    float: right;
+    margin-top: 15px;
+  }
+  .topnav2{
+    margin-left: 75px;
+    margin-right: 75px;
+    margin-bottom: 10px;
+}
+  .topnav2 a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 12px 12px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+.topnav2 a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+footer{
+  padding: 10px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.bottomnav{
+    margin-top: 9px;
+    margin-left: 75px;
+    margin-right: 75px;
+    bottom: 0;
+}
+.bottomnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 12px 12px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+.bottomnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+.bottomnav a#split {
+    margin-bottom: 11px;
+    float: right;
+    margin-right: 5px;
+  }
+.fa {
+    padding: 15px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  
+.fa:hover {
+      opacity: 0.7;
+  }
+  
+.fa-facebook {
+    background: #556b2e;
+    color: white;
+  }
+  
+.fa-twitter {
+    background: #556b2e;
+    color: white;
+  }   
+ hr{
+     border-top: 1px #b7bf96;
+     margin-left: 72px;
+     margin-right: 72px;
+ }
+ li a{
+   color: #556b2e;
+   text-decoration: none;
+ }
+ li a:hover {
+   color: #011b10;
+   text-decoration: underline;
+ }
+ li a:visited {
+   color: #011b10;
+ }
+
+ .success {
+  background: rgba(108, 192, 112, 0.7);
+  color: #fff;
+  width: 70%;
+  text-align: center;
+  padding: 10px 10px;
+}
+
+.error {
+  background: rgba(255, 102, 51, 0.7);
+  color: #fff;
+  width: 70%;
+  text-align: center;
+  padding: 10px 10px;
+}
+ .events {
+   margin-bottom: 10px;
+   font-size: large;
+   color: #556b2e;
+   font-family: Courier, serif;
+ }
+ .eventsheader h2{
+  display: inline-block;
+}
+.eventsbuttons {
+  float: right;
+  background-color: #556b2e;
+  border: none;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.eventsbuttons:hover{
+  opacity: 0.7;
+  background-color: #ddd;
+  color:#030b07;
+}
+
+.eventImage {
+  display:inline;
+  float: left;
+  padding-right: 50px;
+}
+* {box-sizing: border-box;}
+        
+        input[type=text], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+          height: 20px;
+          background-color: #b7bf96;
+        }
+        
+        input[type=submit] {
+          background-color: #556b2e;
+          color: #f2f2f2;
+          padding-bottom: 30px;
+          padding-top:12px;
+          padding-right: 10px;
+          padding-left: 10px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          vertical-align:auto;
+        }
+        
+        input[type=submit]:hover {
+          background-color: #161B0E;
+        }
+        
+        .container2 {
+          border-radius: 5px;
+          background-color: #030b07;
+          padding: 20px;
+          width: 60%;
+          margin-left: auto;
+          margin-right: auto;
+          color:#f2f2f2
+        }
+        label {
+          display: flex;
+          flex-direction: row;
+          line-height: 26px;
+          margin-bottom: 5px;
+          margin-top: 5px;
+        }
+        
+        input {
+          height: 20px;
+          flex: 0 0 200px;
+          margin-left: 10px;
+        }
+        

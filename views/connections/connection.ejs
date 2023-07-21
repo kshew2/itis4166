@@ -1,0 +1,29 @@
+<%- include('../partials/header.ejs')%>
+        <main>
+            <h1>Connection Detail</h1>
+            <h2 class="eventsheader"><%= connections.name%></h2>
+            
+            <form>  
+            <button class="eventsbuttons" type="submit" formmethod="GET" formaction="/connections/<%= connections.id%>/edit">Update</button>
+            <button class="eventsbuttons" type="submit" formmethod="POST" formaction="/connections/<%= connections.id%>?_method=DELETE">Delete</button>
+            </form>
+           
+            <br>
+            <div class="container">
+            <img class="eventImage" alt="eventImage" style="width: 200px; height: 300px; " src="<%= connections.eventImage%>">
+            <p>Hosted by: <%= connections.host.firstName%></p>
+            <p>Topic Type: <%= connections.topic%></p>
+            <p>Date: <%= connections.date%></p>
+            <p>Start time: <%= connections.startTime%></p>
+            <p>End time: <%= connections.endTime%></p>
+            <p>Where: <%= connections.where%></p>
+            </div>
+            
+            
+            <br><br><br><br><br><br>
+            <h2 class="details">Details</h2>
+            <p><%= connections.details%></p>
+        </main>
+    </div>
+    
+        <%- include('../partials/footer.ejs')%>

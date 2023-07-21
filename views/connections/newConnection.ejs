@@ -1,0 +1,40 @@
+<%- include('../partials/header.ejs')%>
+        <main>
+            <h1>Create A New Connection</h1>
+            <div class="container2">
+                <form method="POST" action="/connections" method = 'POST'>
+                  <label for="topic">Topic</label>
+                  <textarea id="topic" name="topic" placeholder="Topic..." style="height:40px" required></textarea>
+              
+                  <label for="name">Name</label>
+                  <textarea id="name" name="name" placeholder="name..." style="height:40px" required></textarea>
+              
+                  <label for="host">Host</label>
+                  <textarea id="host" name="host" placeholder="Host..." style="height:40px" required></textarea>
+              
+                  <label for="details">Details</label>
+                  <textarea id="details" name="details" placeholder="Details..." style="height:60px" required minLength="10"></textarea>
+
+                  <label for="where">Where</label>
+                  <textarea id="where" name="where" placeholder="Where..." style="height:40px" required></textarea>
+
+                    <label for="date">Event Date:</label>
+                    <input type="date" id="date" name="date" required>
+                    <br>
+
+                    <label for="startTime">Start Time:</label>
+                    <input type="time" id="startTime" name="startTime" required>
+                    <br>
+                    <label for="endTime">End Time:</label>
+                    <input type="time" id="endTime" name="endTime" required>
+                    
+                    <label for="eventImage"> Choose a cover photo</label>
+                    <input type="url" id="eventImage" name="eventImage" required>
+                    <br>
+                    <br>
+                    <input type="submit" value="Create Connection">
+                </form>
+                <br>
+              </div>
+        </main>
+        <%- include('../partials/footer.ejs')%>

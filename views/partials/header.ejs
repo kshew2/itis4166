@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+    <head>
+        <meta charset = "utf-8">
+    <title> UREC || Connections</title>
+    <link rel="icon" type="image/jpg" href="/images/favicon.jpg">
+    <link rel="stylesheet" href="/css/default.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header>
+            <nav class="topnav">
+                <a href="/" target="_self">
+               <img class="logo" alt="logo" src="/images/logo_thumbnail.jpg">
+                </a>
+                
+                <%if(!user) {%>
+                <a href='/users/login' target="_self" class="split">Login</a>
+                <a href='/users/new' target="_self" class="split">Sign Up</a>
+                <%} else {%>
+                <a href="/connections/newConnection" target="_self" class="split">New Connection</a>
+                <a href='/users/profile' target="_self" class="split">Profile</a>
+                <a href='/users/logout' target="_self" class="split">Logout</a>
+                <%}%>
+            </nav>
+            <hr class="navbar">
+            <nav class="topnav2">
+                <a href="/" target="_self">Home</a>
+                <a href="/connections" target="_self">Connections</a>
+                
+            </nav>
+            <% if(errorMessages.length > 0) {%>
+                <% errorMessages.forEach(message=>{%>
+                    <div class='error'>
+                        <%=message%>
+                    </div>
+                    <%});%>
+                        <%}%>
+            
+                            <% if(successMessages.length > 0) {%>
+            
+                                <% successMessages.forEach(message=>{%>
+                                    <div class='success'>
+                                        <%=message%>
+                                    </div>
+                                    <%});%>
+                                        <%}%>
+        </header>

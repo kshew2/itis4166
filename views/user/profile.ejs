@@ -1,0 +1,34 @@
+<%- include('../partials/header.ejs')%>
+        <main>
+          <%if(connection.length){
+            topics.forEach(topic=>{%>
+                <h2><%= topic%></h2>
+                <%connection.forEach(connections=>{
+                    if(connections.topic === topic){%> 
+                        <a href = "/connections/connection/<%= connections.id%>"> <p><%= connections.name%></p></a>
+                    <%}
+                });
+            });
+        
+        } else {%>
+        
+            <p>There are no connections to display.</p>
+        <%}%>
+
+
+
+           
+         <!--   <ul>
+                <li class="events"><a href="connection.html" target="_self">Flag Football Scrimmages</a></li>
+                <li class="events"><a href="connection.html" target="_self">Table Tennis Tournament</a></li>
+                <li class="events"><a href="connection.html" target="_self">6v6 Outdoor Soccer League</a></li>
+            </ul>
+            <h2>Clubs</h2>
+            <ul>
+                <li class="events"><a href="connection.html" target="_self">Archery Club</a></li>
+                <li class="events"><a href="connection.html" target="_self">Charlotte Lifters club</a></li>
+                <li class="events"><a href="connection.html" target="_self">MMA Club</a></li>
+            </ul>-->
+        </main>
+        </div>
+        <%- include('../partials/footer.ejs')%>

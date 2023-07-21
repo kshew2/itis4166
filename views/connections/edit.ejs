@@ -1,0 +1,40 @@
+<%- include('../partials/header.ejs')%>
+        <main>
+            <h1>Edit this Connection</h1>
+            <div class="container2">
+                    <form method = "POST" action = "/connections/<%= connections.id%>?_method=PUT">
+                  <label for="topic">Topic</label>
+                  <textarea id="topic" name="topic" placeholder="<%= connections.topic%>" style="height:40px" required></textarea>
+              
+                  <label for="name">Name</label>
+                  <textarea id="name" name="name" placeholder="<%= connections.name%>" style="height:40px" required></textarea>
+              
+                  <label for="host">Host</label>
+                  <textarea id="host" name="host" placeholder="<%= connections.host%>" style="height:40px" required></textarea>
+              
+                  <label for="details">Details</label>
+                  <textarea id="details" name="details" placeholder="<%= connections.details%>" style="height:60px" required minLength="10"></textarea>
+
+                  <label for="where">Where</label>
+                  <textarea id="where" name="where" placeholder="<%= connections.where%>" style="height:40px" required></textarea>
+
+                    <label for="date">Event Date:</label>
+                    <input type="date" id="date" name="date" placeholder="<%= connections.date%>" required>
+                    <br>
+
+                    <label for="startTime">Start Time:</label>
+                    <input type="time" id="startTime" name="startTime" placeholder="<%= connections.startTime%>" required>
+                    <br>
+                    <label for="endTime">End Time:</label>
+                    <input type="time" id="endTime" name="endTime" placeholder="<%= connections.endTime%>" required>
+                    <br>
+                    <label for="eventImage"> Choose a cover photo</label>
+                    <input type="url" id="eventImage" name="eventImage" required>
+                    <br>
+                    <br>
+                    <input type="submit" value="Create Connection">
+                </form>
+                <br>
+              </div>
+        </main>
+        <%- include('../partials/footer.ejs')%>
