@@ -19,7 +19,7 @@ let host = 'localhost';
 app.set('view engine', 'ejs');
 
 //connect to MongoDB
-mongoose.connect('mongodb://0.0.0.0:27017/NBAD', 
+mongoose.connect('mongodb://127.0.0.1:27017/NBAD', 
                 {useNewUrlParser: true, useUnifiedTopology: true/*, useCreateIndex: true */})
 .then(()=>{
     //start the server
