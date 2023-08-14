@@ -15,12 +15,12 @@ const app = express();
 
 //configure app
 //let port = 3000;
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3000;
 let host = 'localhost';
 app.set('view engine', 'ejs');
 
 //connect to MongoDB
-mongoose.connect(process.env.MONGO_CONNECTION, 
+mongoose.connect('mongodb://127.0.0.1:27017/NBAD', 
                 {useNewUrlParser: true, useUnifiedTopology: true/*, useCreateIndex: true */})
 .then(()=>{
     //start the server
