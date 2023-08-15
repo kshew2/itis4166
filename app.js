@@ -13,18 +13,20 @@ const userRoutes = require('./routes/userRoutes');
 //create app
 const app = express();
 
+require('dotenv').config()
 //configure app
 //let port = 3000;
-const port = process.env.PORT || 3000;
-let host = 'localhost';
+const port = process.env.PORT/* || 3000*/;
+//let host = 'localhost';
 app.set('view engine', 'ejs');
 
+//'mongodb://127.0.0.1:27017/NBAD'
 //connect to MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/NBAD', 
+mongoose.connect(process.env.MONGO_CONNECTION, 
                 {useNewUrlParser: true, useUnifiedTopology: true/*, useCreateIndex: true */})
 .then(()=>{
     //start the server
-    app.listen(port, host, ()=>{
+    app.listen(port,/* host, */()=>{
     console.log('Server is runnin on port', port);
 });
 })
@@ -36,7 +38,7 @@ app.use(
         secret: "sasajfmcieo34w4nj4lfjf",
         resave: false,
         saveUninitialized: false,
-        store: new MongoStore({mongoUrl: 'mongodb://127.0.0.1:27017/NBAD'}),
+        store: new MongoStore({mongoUrl: process.env.MONGO_CONNECTION}),
         cookie: {maxAge: 60*60*1000}
     })
 );
