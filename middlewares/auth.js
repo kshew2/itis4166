@@ -23,18 +23,23 @@ exports.isLoggedIn = (req, res, next) =>{
 //check if user is author of the story
 exports.isHost = (req, res, next) =>{
     let id = req.params.id;
+   // console.log('User ID:', req.session.user._id);
+    //console.log('Connection Host ID:', req.params.id);
+
     Connection.findById(id)
     .then(connection=>{
         if(connection) {
-            if(connection.host == req.session.user) {
+            if(connection.host == req.session.user._id) {
+          //      console.log('Connection Host ID:', connection.host.toString());
                 return next();
             } else {
+             //   console.log('Connection Host ID:', connection.host.toString());
                 let err = new Error('Unauthorized to access the resource');
                 err.status = 401;
                 return next(err);
             }
         } else {
-            let err = new Error('Cannot find a story with id ' + req.params.id);
+            let err = new Error('Cannot find a connection with id ' + req.params.id);
             err.status = 404;
             return next(err);
         }

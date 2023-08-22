@@ -199,6 +199,7 @@ footer{
   display:inline;
   float: left;
   padding-right: 50px;
+  object-fit: cover;
 }
 * {box-sizing: border-box;}
         

@@ -5,7 +5,9 @@
                 <h2><%= topic%></h2>
                 <%connection.forEach(connections=>{
                     if(connections.topic === topic){%> 
-                        <a href = "/connections/connection/<%= connections.id%>"> <p><%= connections.name%></p></a>
+                        <li>
+                        <a href = "/connections/connection/<%= connections.id%>"> <%= connections.name%></a>
+                    </li>
                     <%}
                 });
             });
