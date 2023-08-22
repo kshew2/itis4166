@@ -93,13 +93,13 @@ exports.edit = (req, res, next)=>{
 exports.update =  (req, res, next)=>{
     let connections = req.body;
     let id = req.params.id;
-
+    
     if(!id.match(/^[0-9a-fA-F]{24}$/)) {
         let err = new Error('Invalid story id');
         err.status = 400;
         return next(err);
     }
-
+    connections.host = req.session.user._id;
     model.findByIdAndUpdate(id, connections, {useFindAndModify: false, runValidators: true})
     .then(connections=>{
         if(connections){
