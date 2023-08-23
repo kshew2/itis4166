@@ -200,14 +200,15 @@ footer{
   float: left;
   padding-right: 50px;
   object-fit: contain;
-  max-width: 30%;
-  max-height: 50%;
+  max-width: 100%;
+  max-height: 100%;
   width: auto;
   height: auto;
 }
 .imageContainer{
   display:inline;
-  width: 200px;
+  float: left;
+  width: 300px;
   height: 300px;
 }
 * {box-sizing: border-box;}
