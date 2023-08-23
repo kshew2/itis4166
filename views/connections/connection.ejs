@@ -10,7 +10,9 @@
            
             <br>
             <div class="container">
-            <img class="eventImage" alt="eventImage" style="width: 200px; height: 300px; " src="<%= connections.eventImage%>">
+                <div class="imageContainer">
+            <img class="eventImage" alt="eventImage" src="<%= connections.eventImage%>">
+        </div>
             <p>Hosted by: <%= connections.host.firstName%></p>
             <p>Topic Type: <%= connections.topic%></p>
             <p>Date: <%= connections.date%></p>

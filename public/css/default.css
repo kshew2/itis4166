@@ -199,7 +199,16 @@ footer{
   display:inline;
   float: left;
   padding-right: 50px;
-  object-fit: cover;
+  object-fit: contain;
+  max-width: 30%;
+  max-height: 50%;
+  width: auto;
+  height: auto;
+}
+.imageContainer{
+  display:inline;
+  width: 200px;
+  height: 300px;
 }
 * {box-sizing: border-box;}
         
